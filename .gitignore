@@ -1,4 +1,7 @@
 
+# Python
+/.py-env
+
 # Node modules
 /client/node_modules
 

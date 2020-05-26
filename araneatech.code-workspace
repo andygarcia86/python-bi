@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.venvPath": "${workspaceFolder}/.py-env",
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Enabled": true,
+		"python.linting.enabled": true,
+		"python.pythonPath": ".py-env\\python-bi-demo\\Scripts\\python.exe",
+		"python.formatting.provider": "black",
+	}
+}
