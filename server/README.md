@@ -16,7 +16,8 @@ Setup Flask application environment using Visual Studio Code.
 2. Configure the python venv folder in the workspace:
 - Go to VSCode `File/Preferences/Settings/Workspace`
 - Search for `venv` to find `Python: Venv Path` and enter `${workspaceFolder}/.py-env` value
-- pip install -r requirements.txt
+- Move to the server folder
+- Run `pip install -r requirements.txt` in the terminal
 
 
 ## Setup
