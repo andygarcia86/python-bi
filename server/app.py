@@ -9,7 +9,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
     basedir, "planets.db"
 )
-app.config['JWT_SECRET_KEY'] = 'super-secret'  # change this IRL
+app.config["JWT_SECRET_KEY"] = "super-secret"  # change this IRL
 
 # db = SQLAlchemy(app)
 jwt = JWTManager(app)
@@ -17,7 +17,13 @@ jwt = JWTManager(app)
 
 @app.route("/")
 def hello_world():
-    return "Hello World!"
+    return "Hello World 1!"
+
+
+@app.route("/reports", methods=["GET"])
+def reports():
+    reports = [{"report_id": 1, "report_name": "Sales"}]
+    return jsonify(reports), 200
 
 
 @app.route("/url_variables/<string:name>/<int:age>")
@@ -26,6 +32,7 @@ def url_variables(name: str, age: int):
         return jsonify(message="Sorry " + name + ", you are not old enough."), 401
     else:
         return jsonify(message="Welcome " + name + ", you are old enough!")
+
 
 """
 @app.route("/planets", methods=["GET"])

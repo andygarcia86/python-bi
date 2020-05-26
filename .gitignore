@@ -2,6 +2,7 @@
 # Python
 /.py-env
 /.pytest_cache
+/server/.pytest_cache
 
 # Node modules
 /client/node_modules
