@@ -1,0 +1,7 @@
+TODO
+------------------------------------
+- Create Database
+- Create Report_Category Table
+- Create Report Table
+- Create Widget Table
+- Create Widget_Taype Table
