@@ -11,16 +11,6 @@ export const navItems: INavData[] = [
     name: 'Theme'
   },
   {
-    name: 'Colors',
-    url: '/theme/colors',
-    icon: 'icon-drop'
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    icon: 'icon-pencil'
-  },
-  {
     title: true,
     name: 'Reports'
   },
@@ -32,11 +22,6 @@ export const navItems: INavData[] = [
       {
         name: 'Cards',
         url: '/base/cards',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Carousels',
-        url: '/base/carousels',
         icon: 'icon-puzzle'
       },
       {
@@ -106,11 +91,6 @@ export const navItems: INavData[] = [
         name: 'Dropdowns',
         url: '/buttons/dropdowns',
         icon: 'icon-cursor'
-      },
-      {
-        name: 'Brand Buttons',
-        url: '/buttons/brand-buttons',
-        icon: 'icon-cursor'
       }
     ]
   },
@@ -118,41 +98,6 @@ export const navItems: INavData[] = [
     name: 'Charts',
     url: '/charts',
     icon: 'icon-pie-chart'
-  },
-  {
-    name: 'Icons',
-    url: '/icons',
-    icon: 'icon-star',
-    children: [
-      {
-        name: 'CoreUI Icons',
-        url: '/icons/coreui-icons',
-        icon: 'icon-star',
-        badge: {
-          variant: 'success',
-          text: 'NEW'
-        }
-      },
-      {
-        name: 'Flags',
-        url: '/icons/flags',
-        icon: 'icon-star'
-      },
-      {
-        name: 'Font Awesome',
-        url: '/icons/font-awesome',
-        icon: 'icon-star',
-        badge: {
-          variant: 'secondary',
-          text: '4.7'
-        }
-      },
-      {
-        name: 'Simple Line Icons',
-        url: '/icons/simple-line-icons',
-        icon: 'icon-star'
-      }
-    ]
   },
   {
     name: 'Notifications',
@@ -179,11 +124,7 @@ export const navItems: INavData[] = [
   {
     name: 'Widgets',
     url: '/widgets',
-    icon: 'icon-calculator',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
+    icon: 'icon-calculator'
   },
   {
     divider: true
