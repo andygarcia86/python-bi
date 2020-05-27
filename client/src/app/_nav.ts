@@ -25,20 +25,9 @@ export const navItems: INavData[] = [
     icon: 'icon-puzzle',
     children: [
       {
-        name: 'Cards',
-        url: '/base/cards',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Collapses',
-        url: '/base/collapses',
-        icon: 'icon-puzzle'
-      },
-      {
         name: 'Navbars',
         url: '/base/navbars',
         icon: 'icon-puzzle'
-
       },
       {
         name: 'Pagination',
