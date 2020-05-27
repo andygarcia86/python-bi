@@ -16,9 +16,13 @@ You can find an static (HTML/CSS/Javascript) [Demo](https://andygarcia86.github.
 
 The API is built in with Flask Python application.
 
-## Client App
+## Client Application (Angular Version)
 
-The Client side is built in with Angular 9.
+There is a Client application built with Angular 9, using the Admin template [Core UI](https://coreui.io/angular/) free version.
+
+## Client Application (React Version)
+
+There is a Client application built with React, using the Admin template [Core UI](https://coreui.io/react/) free version.
 
 ## Database
 
