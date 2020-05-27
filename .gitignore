@@ -6,7 +6,9 @@
 /.py-env
 /.pytest_cache
 /server/.pytest_cache
-/client/TODO.txt
+/server/TODO.txt
+/server/__pycache__
+/server/.vscode
 
 # Client Angular
 /client-angular/node_modules
