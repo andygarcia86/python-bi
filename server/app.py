@@ -1,17 +1,33 @@
 from flask import Flask, jsonify, request
-import os
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.pool import QueuePool
+
+from sqlalchemy import Column, Integer, String, Float
+from flask_marshmallow import Marshmallow
+#from database import Report, reports_schema
 
 
 app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'planets.db')
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
-    basedir, "planets.db"
-)
 app.config["JWT_SECRET_KEY"] = "super-secret"  # change this IRL
 
-# db = SQLAlchemy(app)
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "mysql+pymysql://{user}:{password}@{host}:3309/{database}".format(
+    user="root", password="", host="localhost", database="python_bi_demo",
+)
+
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "poolclass": QueuePool,
+    "pool_size": 10,
+    "pool_recycle": 300,
+    "pool_use_lifo": True,
+    "pool_pre_ping": True,
+}
+
+db = SQLAlchemy(app)
+ma = Marshmallow(app)
 jwt = JWTManager(app)
 
 
@@ -23,7 +39,10 @@ def hello_world():
 @app.route("/reports", methods=["GET"])
 def reports():
     reports = [{"report_id": 1, "report_name": "Sales"}]
-    return jsonify(reports), 200
+
+    reports_list = Report.query.all()
+    result = reports_schema.dump(reports_list)
+    return jsonify(result.data)
 
 
 @app.route("/url_variables/<string:name>/<int:age>")
@@ -144,6 +163,45 @@ def remove_planet(planet_id: int):
     else:
         return jsonify(message="That planet does not exist"), 404
 """
+
+
+# database models
+class User(db.Model):
+    __tablename__ = "user"
+
+    id = Column(Integer, primary_key=True)
+    first_name = Column(String)
+    last_name = Column(String)
+    email = Column(String, unique=True)
+    password = Column(String)
+
+
+class Report(db.Model):
+    __tablename__ = "report"
+
+    report_id = Column(Integer, primary_key=True)
+    report_name = Column(String)
+
+
+class UserSchema(ma.Schema):
+    class Meta:
+        fields = ("id", "first_name", "last_name", "email", "password")
+
+
+class ReportSchema(ma.Schema):
+    class Meta:
+        fields = (
+            "report_id",
+            "report_name",
+        )
+
+
+user_schema = UserSchema()
+users_schema = UserSchema(many=True)
+
+report_schema = ReportSchema()
+reports_schema = ReportSchema(many=True)
+
 
 if __name__ == "__main__":
     app.run()

@@ -2,13 +2,15 @@ from sqlalchemy import Column, Integer, String, Float
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
-db = SQLAlchemy(app)
-ma = Marshmallow(app)
+#db = SQLAlchemy()
+ma = Marshmallow()
+
 
 
 # database models
 class User(db.Model):
     __tablename__ = "user"
+
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
@@ -18,6 +20,7 @@ class User(db.Model):
 
 class Report(db.Model):
     __tablename__ = "report"
+
     report_id = Column(Integer, primary_key=True)
     report_name = Column(String)
 
