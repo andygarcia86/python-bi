@@ -8,6 +8,6 @@
 /server/.pytest_cache
 /client/TODO.txt
 
-# Client
-/client/node_modules
-/client/TODO.txt
+# Client Angular
+/client-angular/node_modules
+/client-angular/TODO.txt
