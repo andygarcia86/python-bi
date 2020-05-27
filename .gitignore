@@ -1,9 +1,13 @@
+# General
+/.vscode
+/TODO.txt
 
 # Python
 /.py-env
 /.pytest_cache
 /server/.pytest_cache
+/client/TODO.txt
 
-# Node modules
+# Client
 /client/node_modules
-
+/client/TODO.txt
