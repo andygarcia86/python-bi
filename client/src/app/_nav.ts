@@ -11,6 +11,11 @@ export const navItems: INavData[] = [
     name: 'Theme'
   },
   {
+    name: 'Forms',
+    url: '/base/forms',
+    icon: 'icon-puzzle'
+  },
+  {
     title: true,
     name: 'Reports'
   },
@@ -27,11 +32,6 @@ export const navItems: INavData[] = [
       {
         name: 'Collapses',
         url: '/base/collapses',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Forms',
-        url: '/base/forms',
         icon: 'icon-puzzle'
       },
       {
@@ -56,11 +56,6 @@ export const navItems: INavData[] = [
         icon: 'icon-puzzle'
       },
       {
-        name: 'Switches',
-        url: '/base/switches',
-        icon: 'icon-puzzle'
-      },
-      {
         name: 'Tables',
         url: '/base/tables',
         icon: 'icon-puzzle'
@@ -74,23 +69,6 @@ export const navItems: INavData[] = [
         name: 'Tooltips',
         url: '/base/tooltips',
         icon: 'icon-puzzle'
-      }
-    ]
-  },
-  {
-    name: 'Buttons',
-    url: '/buttons',
-    icon: 'icon-cursor',
-    children: [
-      {
-        name: 'Buttons',
-        url: '/buttons/buttons',
-        icon: 'icon-cursor'
-      },
-      {
-        name: 'Dropdowns',
-        url: '/buttons/dropdowns',
-        icon: 'icon-cursor'
       }
     ]
   },
