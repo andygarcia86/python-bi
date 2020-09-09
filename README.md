@@ -12,6 +12,8 @@ Python Business Intelligence solution using Data warehousing. Dynamic reports wi
 
 You can find an static (HTML/CSS/Javascript) [Demo](https://andygarcia86.github.io/python-bi/) demo. The static demo have the different types of charts and tables that you will be able to find in the real application.
 
+The Demo uses the [CORE UI Angular Admin Theme](https://coreui.io/admin-templates/angular/?affChecked=1) library the free version.
+
 ## API
 
 The API is built in with Flask Python application.
