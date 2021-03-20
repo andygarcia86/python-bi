@@ -6,7 +6,7 @@ Flask-Mail==0.9.1
 flask-marshmallow==0.9.0
 Flask-SQLAlchemy==2.3.2
 itsdangerous==1.1.0
-Jinja2==2.11
+Jinja2==2.11.3
 MarkupSafe==1.1.0
 marshmallow==2.18.1
 marshmallow-sqlalchemy==0.16.0
