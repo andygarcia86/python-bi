@@ -10,7 +10,7 @@ Jinja2==2.11
 MarkupSafe==1.1.0
 marshmallow==2.18.1
 marshmallow-sqlalchemy==0.16.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 six==1.12.0
 SQLAlchemy==1.3.0
 Werkzeug==0.15.3
